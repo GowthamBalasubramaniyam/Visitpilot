@@ -22,7 +22,7 @@ const RepostRequests = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const navigate = useNavigate();
-    const baseURL = 'http://localhost:5000';
+    const baseURL = 'https://inspecton-management-backend.vercel.app';
 
     useEffect(() => {
         const fetchOverdueVisits = async () => {

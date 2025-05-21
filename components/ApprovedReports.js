@@ -24,7 +24,7 @@ const ApprovedReports = () => {
   useEffect(() => {
     const fetchApprovedVisits = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/approved-visits`, {
+        const response = await fetch(`https://inspecton-management-backend.vercel.app/api/approved-visits`, {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }

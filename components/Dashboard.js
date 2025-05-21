@@ -65,11 +65,11 @@ useEffect(() => {
             }
 
             const token = localStorage.getItem('token');
-            let endpoint = 'http://localhost:5000/api/visits/counts';
+            let endpoint = 'https://inspecton-management-backend.vercel.app/api/visits/counts';
             
             // For non-admin users, use their designation from the just-loaded user data
             if (userData.role && userData.role.toLowerCase() !== 'admin' && userData.designation) {
-                endpoint = `http://localhost:5000/api/visits/counts?designation=${encodeURIComponent(userData.designation)}`;
+                endpoint = `https://inspecton-management-backend.vercel.app/api/visits/counts?designation=${encodeURIComponent(userData.designation)}`;
             }
 
             const response = await fetch(endpoint, {

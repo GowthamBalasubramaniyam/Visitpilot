@@ -42,7 +42,7 @@ const VisitDetails = () => {
       try {
         setLoading(true);
         const token = localStorage.getItem('token');
-        const response = await fetch(`http://localhost:5000/api/submitted-visits/${id}`, {
+        const response = await fetch(`https://inspecton-management-backend.vercel.app/api/submitted-visits/${id}`, {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
@@ -91,7 +91,7 @@ const VisitDetails = () => {
   const handleApprove = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/submitted-visits/approve/${id}`, {
+      const response = await fetch(`https://inspecton-management-backend.vercel.app/api/submitted-visits/approve/${id}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,

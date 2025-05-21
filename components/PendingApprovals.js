@@ -22,7 +22,7 @@ const PendingApprovals = () => {
     const fetchPendingVisits = async () => {
       try {
         const statusFilter = encodeURIComponent('approval pending');
-        const response = await fetch(`http://localhost:5000/api/pending-visits/approval-pending`, {
+        const response = await fetch(`https://inspecton-management-backend.vercel.app/api/pending-visits/approval-pending`, {
   headers: {
     'Authorization': `Bearer ${localStorage.getItem('token')}`
   }

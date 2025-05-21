@@ -43,7 +43,7 @@ const TotalVisits = () => {
       try {
         if (!user) return;
 
-        let url = `http://localhost:5000/api/visits?page=${page + 1}&limit=${rowsPerPage}`;
+        let url = `https://inspecton-management-backend.vercel.app/api/visits?page=${page + 1}&limit=${rowsPerPage}`;
 
         const response = await fetch(url, {
           headers: {

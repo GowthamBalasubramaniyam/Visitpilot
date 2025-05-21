@@ -80,14 +80,14 @@ const CreateAccount = () => {
         return false;
       }
 
-      const checkRes = await axios.get(`/api/users/check-employee-id/${encodeURIComponent(employeeId)}`);
+      const checkRes = await axios.get(`https://inspecton-management-backend.vercel.app/api/users/check-employee-id/${encodeURIComponent(employeeId)}`);
 
       if (checkRes.data.exists) {
         setEmployeeIdError('This employee ID is already registered');
         return false;
       }
 
-      const validationRes = await axios.get(`/api/employees/validate/${encodeURIComponent(employeeId)}`);
+      const validationRes = await axios.get(`https://inspecton-management-backend.vercel.app/api/employees/validate/${encodeURIComponent(employeeId)}`);
 
       if (!validationRes.data.isValid) {
         setEmployeeIdError(validationRes.data.message || 'Invalid Employee ID');
@@ -145,7 +145,7 @@ const CreateAccount = () => {
       console.log('Registration payload:', registrationData);
 
       const response = await axios.post(
-        'http://localhost:5000/api/auth/register',
+        'https://inspecton-management-backend.vercel.app/api/auth/register',
         registrationData,
         {
           headers: {

@@ -65,7 +65,7 @@ const ReportApproval = ({ onLogout }) => {
           throw new Error('No authentication token found');
         }
 
-        const response = await fetch('http://localhost:5000/api/submitted-visits', {
+        const response = await fetch('https://inspecton-management-backend.vercel.app/api/submitted-visits', {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
@@ -108,7 +108,7 @@ const ReportApproval = ({ onLogout }) => {
   const handleApprove = async (visitId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/submitted-visits/approve/${visitId}`, {
+      const response = await fetch(`https://inspecton-management-backend.vercel.app/api/submitted-visits/approve/${visitId}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,

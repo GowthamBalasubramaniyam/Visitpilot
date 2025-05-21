@@ -68,7 +68,7 @@ const Login = ({ onLogin }) => {
 
       console.log('Validating employee ID:', rawId);
       const response = await axios.get(
-        `http://localhost:5000/api/employees/validate/${encodeURIComponent(rawId)}`
+        `https://inspecton-management-backend.vercel.app/api/employees/validate/${encodeURIComponent(rawId)}`
       );
 
       console.log('Validation response:', response.data);
@@ -110,7 +110,7 @@ const Login = ({ onLogin }) => {
       }
 
       const response = await axios.post(
-        'http://localhost:5000/api/auth/login',
+        'https://inspecton-management-backend.vercel.app/api/auth/login',
         {
           username,
           password,

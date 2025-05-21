@@ -109,7 +109,7 @@ const PostVisit = ({ onLogout }) => {
     try {
       setIsSubmitting(true);
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/visits', {
+      const response = await fetch('https://inspecton-management-backend.vercel.app/api/visits', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

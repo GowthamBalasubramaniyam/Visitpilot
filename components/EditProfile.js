@@ -73,7 +73,7 @@ const EditProfile = () => {
       };
 
       const response = await axios.put(
-        'http://localhost:5000/api/users/update-profile',
+        'https://inspecton-management-backend.vercel.app/api/users/update-profile',
         updateData,
         {
           headers: {

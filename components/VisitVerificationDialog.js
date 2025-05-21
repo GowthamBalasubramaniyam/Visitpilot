@@ -39,7 +39,7 @@ const VisitVerificationDialog = ({ open, onClose, visit, onVerify }) => {
     try {
       const token = localStorage.getItem('token');
       const response = await fetch(
-        `http://localhost:5000/api/visits/verify-employee?visitId=${visit._id}&employeeId=${employeeId}&requiredPosition=${visit.postedTo}`,
+        `https://inspecton-management-backend.vercel.app/api/visits/verify-employee?visitId=${visit._id}&employeeId=${employeeId}&requiredPosition=${visit.postedTo}`,
         {
           headers: {
             'Authorization': `Bearer ${token}`,

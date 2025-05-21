@@ -59,7 +59,7 @@ const FieldVisitLog = ({ onLogout }) => {
                 setError(null);
                 const token = localStorage.getItem('token');
 
-                const response = await fetch('http://localhost:5000/api/visits/pending', {
+                const response = await fetch('https://inspecton-management-backend.vercel.app/api/visits/pending', {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                         'Content-Type': 'application/json'
@@ -149,7 +149,7 @@ const FieldVisitLog = ({ onLogout }) => {
 const handleSaveVisit = async (updatedData) => {
     try {
         const token = localStorage.getItem('token');
-        const response = await fetch(`http://localhost:5000/api/visits/${selectedVisit._id}`, {
+        const response = await fetch(`https://inspecton-management-backend.vercel.app/api/visits/${selectedVisit._id}`, {
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -195,7 +195,7 @@ const handleSaveVisit = async (updatedData) => {
         console.log(`Requesting repost for visit ID: ${visitId}`);
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:5000/api/visits/${visitId}/status`, {
+            const response = await fetch(`https://inspecton-management-backend.vercel.app/api/visits/${visitId}/status`, {
                 method: 'PATCH',
                 headers: {
                     'Authorization': `Bearer ${token}`,

@@ -22,7 +22,7 @@ import { motion } from 'framer-motion';
 import axios from 'axios';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
-const BACKEND_URL = 'http://localhost:5000';
+const BACKEND_URL = 'https://inspecton-management-backend.vercel.app';
 
 const FieldVisitReport = ({ onLogout }) => {
   const { visitId } = useParams();

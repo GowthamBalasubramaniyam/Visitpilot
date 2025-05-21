@@ -26,7 +26,7 @@ function CompleteProfile() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/google/register', {
+      const res = await axios.post('https://inspecton-management-backend.vercel.app/auth/google/register', {
         ...formData,
         designation
       });
